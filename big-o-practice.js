@@ -48,8 +48,8 @@ function printAnimals(animals) {
 }
 
 // Print out all the animals twice
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n) - Each loop runs `n` times, but they run sequentially, so it's `O(2n)` which simplifies to `0(n)`
+// Space complexity: O(1) - Only a few variables are used, and their space is constant
 function printAnimalsTwice(animals) {
   for (let i = 0 ; i < animals.length ; i++) {
     console.log(animals[i]);
@@ -60,8 +60,8 @@ function printAnimalsTwice(animals) {
 }
 
 // Print all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n^2) - There are two nested loops, each running `n` times
+// Space complexity: O(1) - Only a few variables are used, and their space is constant
 function printAnimalPairs(animals) {
   for (let i = 0 ; i < animals.length ; i++) {
     for (let j = 0 ; j < animals.length ; j++) {
@@ -71,8 +71,8 @@ function printAnimalPairs(animals) {
 }
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n^2) - There are two nested loops, each running `n` times
+// Space complexity: O(n^2) - The array `pairs` will store `n^2` pairs
 function getAnimalPairs(animals) {
   const pairs = [];
   for (let i = 0 ; i < animals.length ; i++) {
@@ -85,8 +85,8 @@ function getAnimalPairs(animals) {
 
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n^3) - There are three nested loops, each running `n` times
+// Space complexity: O(n^3) - The array `triples` will store `n^3` triples
 function getAnimalTriples(animals) {
   const triples = [];
   for (let i = 0 ; i < animals.length ; i++) {
@@ -101,8 +101,8 @@ function getAnimalTriples(animals) {
 
 // Returns the index of the animal if it is in the array
 // Returns -1 if it is not in the array
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n) - In the worst case, the loop will run `n` times
+// Space complexity: O(1) - Only a few variables are used, and their space is constant
 function findAnimal(animals, target) {
   for (let i = 0 ; i < animals.length ; i++) {
     if (animals[i] === target) return i;
